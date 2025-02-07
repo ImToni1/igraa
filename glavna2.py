@@ -9,13 +9,15 @@ def load_image(path, size):
 
 def game_loop():
     pygame.init()
-    
     screen = pygame.display.set_mode((800, 600))
     pygame.display.set_caption("Kuća i Portal")
     
+    
+    
     background_image = load_image("Slike/Pozadina.png", (800, 600))
-    character_image = pygame.image.load(selected_player)
-    character_image = pygame.transform.scale(character_image, (300, 300))
+    character_image= load_image("Slike/player1.png", (300, 300))
+    #character_image = pygame.image.load(selected_player)
+    #character_image = pygame.transform.scale(character_image, (300, 300))
     house_image = load_image("Slike/home.jpg", (120, 120))
     portal_image = load_image("Slike/portal.png", (120, 120))
  
@@ -24,7 +26,7 @@ def game_loop():
     
     x_position = 300
     y_position = 270
-    speed = 5
+    speed = 7
     facing_right = True
     last_interaction_time = 0
     cooldown = 2  # Sekunde
@@ -75,6 +77,6 @@ def game_loop():
     pygame.quit()
 
 if __name__ == "__main__":
-    selected_player = sys.argv[1]
+    #selected_player = sys.argv[1]
     game_loop()
     

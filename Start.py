@@ -9,6 +9,9 @@ def start_screen():
     font = pygame.font.Font(None, 50)
     text = font.render("Press ANY key to continue", True, (255, 255, 255))
     text_rect = text.get_rect(center=(400, 300))
+    pygame.mixer.music.load("Slike/music.mp3")  
+    pygame.mixer.music.play(-1)
+    pygame.mixer.music.set_volume(0.1)
     
     background = pygame.image.load("Slike/Pozadina.png")  
     bg_x = 0  

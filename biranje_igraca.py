@@ -4,11 +4,12 @@ import os
 
 def select_player_screen():
     pygame.init()
+ 
     screen = pygame.display.set_mode((800, 600))
     pygame.display.set_caption("Select Player")
     font = pygame.font.Font(None, 50)
     title_font = pygame.font.Font(None, 60)
-    
+   
     background = pygame.image.load("Slike/Pozadina.png")  
     bg_x = 0  
     bg_speed = 2  
